@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #ffffff;
+  --black: #1a1a1a;
+  --beige: #f5f0eb;
+  --beige-dark: #e8e0d6;
+  --sand: #c4a882;
+  --taupe: #8b7d6b;
+  --grey-light: #f8f7f5;
+  --grey: #999;
+  --green: #2d6a4f;
+  --red: #c1121f;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Luxury scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--sand); border-radius: 3px; }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fadeIn 0.6s ease forwards; }
+.animate-slide-up { animation: slideUp 0.8s ease forwards; }
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+
+/* Selection */
+::selection { background: var(--sand); color: var(--white); }
